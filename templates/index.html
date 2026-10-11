@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f7ee">
+    <meta name="description"
+          content="TerraQuest AI turns outdoor time into personalized nature missions. Explore nature, identify species, and collect discoveries.">
+
+    <title>TerraQuest AI — Find Your Outside</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="topbar">
+        <a class="brand" href="#home" aria-label="TerraQuest home">
+            <span class="brand-mark">T</span>
+            <span>terraquest<span class="brand-ai">.ai</span></span>
+        </a>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="#how-it-works">How it works</a>
+            <a href="#mission-planner">Explore</a>
+            <a href="#scan-discovery">Scan discovery</a>
+            <a href="#leaderboard">Nearby Top 10</a>
+            <a class="nav-cta" href="#mission-planner">Find my outside ↗</a>
+        </nav>
+    </header>
+
+    <main id="home">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-copy">
+                <div class="eyebrow">
+                    <span class="live-dot"></span>
+                    A LITTLE LESS SCREEN. A LITTLE MORE WORLD.
+                </div>
+
+                <h1>
+                    Your world is<br>
+                    <span>waiting outside.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Tell us what you love and how much time you have.
+                    We'll help you turn an ordinary day into a small
+                    adventure worth remembering.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="primary-button" href="#mission-planner">
+                        Find my next adventure <span>↗</span>
+                    </a>
+
+                    <a class="hero-note" href="#scan-discovery">
+                        Have a discovery? Scan it 🌿
+                    </a>
+                </div>
+
+                <div class="hero-proof">
+                    <span class="proof-icon">✳</span>
+                    <span>Made for curious minds and the world beyond the screen.</span>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <img
+                    class="hero-image"
+                    src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85"
+                    alt="Sunlight filtering through a peaceful green forest"
+                >
+
+                <div class="image-shade"></div>
+
+                <div class="image-label">
+                    <span class="image-label-icon">↗</span>
+                    <div>
+                        <span class="image-label-small">YOUR NEXT CHAPTER</span>
+                        <strong>Out there, somewhere.</strong>
+                    </div>
+                </div>
+
+                <div class="floating-note">
+                    <span class="floating-icon">🌿</span>
+                    <div>
+                        <strong>Take the long way.</strong>
+                        <span>Notice something new.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="benefits" id="how-it-works">
+            <div class="benefit">
+                <span class="benefit-number">01</span>
+                <div>
+                    <h3>Pick your pace</h3>
+                    <p>Five minutes or an afternoon. Start where you are.</p>
+                </div>
+            </div>
+
+            <div class="benefit">
+                <span class="benefit-number">02</span>
+                <div>
+                    <h3>Get a little curious</h3>
+                    <p>Find a mission inspired by your interests.</p>
+                </div>
+            </div>
+
+            <div class="benefit">
+                <span class="benefit-number">03</span>
+                <div>
+                    <h3>Go live it</h3>
+                    <p>Take your mission outside. The screen can wait.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission planner -->
+        <section class="explore-section" id="mission-planner">
+            <div class="section-intro">
+                <span class="eyebrow">YOUR NEXT OUTDOOR MOMENT</span>
+                <h2>Small plans.<br><span>Big outside energy.</span></h2>
+                <p>Choose what sounds good today. We'll help with the rest.</p>
+            </div>
+
+            <div class="planner-layout">
+                <div class="activity-sidebar">
+                    <div class="sidebar-heading">
+                        <span class="eyebrow">CHOOSE YOUR MOOD</span>
+                        <span class="sidebar-symbol">✳</span>
+                    </div>
+
+                    <button class="activity-card selected"
+                            type="button" data-activity="nature">
+                        <span class="activity-icon">🌲</span>
+                        <span class="activity-text">
+                            <strong>Nature discovery</strong>
+                            <small>Look closer at the living world.</small>
+                        </span>
+                        <span class="activity-arrow">↗</span>
+                    </button>
+
+                    <button class="activity-card"
+                            type="button" data-activity="gardening">
+                        <span class="activity-icon">🌱</span>
+                        <span class="activity-text">
+                            <strong>Garden explorer</strong>
+                            <small>Notice how things grow.</small>
+                        </span>
+                        <span class="activity-arrow">↗</span>
+                    </button>
+
+                    <button class="activity-card"
+                            type="button" data-activity="walking">
+                        <span class="activity-icon">🥾</span>
+                        <span class="activity-text">
+                            <strong>Mindful walk</strong>
+                            <small>Move, breathe, and observe.</small>
+                        </span>
+                        <span class="activity-arrow">↗</span>
+                    </button>
+
+                    <div class="sidebar-tip">
+                        <span>✦ A small reminder</span>
+                        <p>You don't need to go far to find something worth noticing.</p>
+                    </div>
+                </div>
+
+                <div class="planner panel">
+                    <div class="planner-heading">
+                        <div>
+                            <span class="eyebrow">MISSION BUILDER</span>
+                            <h2>What feels right today?</h2>
+                        </div>
+                        <span class="planner-sparkle">✳</span>
+                    </div>
+
+                    <form id="mission-form">
+                        <label for="activity">Your activity</label>
+                        <select id="activity" name="activity">
+                            <option value="nature">Nature discovery</option>
+                            <option value="gardening">Garden explorer</option>
+                            <option value="walking">Mindful walk</option>
+                        </select>
+
+                        <div class="form-row">
+                            <div>
+                                <label for="duration">Time you have</label>
+                                <select id="duration" name="duration">
+                                    <option value="10">10 minutes</option>
+                                    <option value="20" selected>20 minutes</option>
+                                    <option value="30">30 minutes</option>
+                                    <option value="45">45 minutes</option>
+                                    <option value="60">60 minutes</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="difficulty">Your pace</label>
+                                <select id="difficulty" name="difficulty">
+                                    <option value="beginner">Easy going</option>
+                                    <option value="intermediate">A little curious</option>
+                                    <option value="challenging">Up for a challenge</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <label for="interests">Anything you'd love to discover?</label>
+                        <input
+                            id="interests"
+                            name="interests"
+                            maxlength="200"
+                            placeholder="Birds, wildflowers, trees, tiny details..."
+                        >
+
+                        <button class="primary-button generate-button"
+                                type="submit" id="generate-button">
+                            Create my outdoor mission <span>↗</span>
+                        </button>
+
+                        <p class="form-footnote">
+                            Your preferences help shape the adventure.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission result -->
+        <section id="mission-result" class="mission-result panel"
+                 hidden aria-live="polite">
+            <div class="result-header">
+                <span class="eyebrow">YOUR OUTDOOR MISSION</span>
+                <span class="mission-status"><span></span> READY WHEN YOU ARE</span>
+            </div>
+
+            <h2 id="mission-title">Your next little adventure</h2>
+            <p id="mission-description"></p>
+            <p class="mission-meta" id="mission-meta"></p>
+
+            <div class="result-divider"></div>
+
+            <h3>Here's your plan</h3>
+            <ol id="mission-steps"></ol>
+
+            <label for="reflection">What did you discover?</label>
+            <textarea id="reflection" maxlength="500"
+                      placeholder="Save a thought for after your adventure..."></textarea>
+
+            <button class="primary-button complete-button"
+                    id="complete-button" type="button">
+                Mark mission complete <span>✓</span>
+            </button>
+
+            <p id="completion-message" role="status"></p>
+            <p class="go-outside-note">
+                Now close the screen for a while. The world is waiting. 🌿
+            </p>
+        </section>
+
+        <!-- NEW: Scan Discovery -->
+        <section class="scan-section" id="scan-discovery">
+            <div class="scan-heading">
+                <span class="scan-eyebrow">YOUR NEXT DISCOVERY</span>
+                <h2>Scan the wild around you.</h2>
+                <p>
+                    Found something interesting outside?
+                    Photograph it, explore what it might be, and build
+                    your own collection of nature discoveries.
+                </p>
+            </div>
+
+            <div class="scan-card">
+
+                <!-- Image upload -->
+                <div class="scan-upload-area" id="scan-upload-area">
+                    <div class="scan-icon">🌿</div>
+
+                    <h3>Identify your discovery</h3>
+
+                    <p>
+                        Choose a clear photo of a plant, tree,
+                        flower, or insect.
+                    </p>
+
+                    <input
+                        type="file"
+                        id="discovery-image"
+                        accept="image/jpeg,image/png,image/webp,image/*"
+                        capture="environment"
+                        hidden
+                    >
+
+                    <div class="scan-choice-actions">
+                        <button type="button" id="choose-image" class="scan-button">
+                            Upload a photo
+                        </button>
+                        <button type="button" id="open-camera" class="scan-secondary">
+                            Open camera
+                        </button>
+                    </div>
+                    <p class="scan-hint">Upload an image or take a photo directly. JPG, PNG, WEBP · Maximum 10 MB</p>
+
+                    <div id="camera-panel" class="camera-panel" hidden>
+                        <video id="camera-video" autoplay playsinline muted aria-label="Live camera preview"></video>
+                        <div class="scan-preview-actions">
+                            <button type="button" id="take-photo" class="scan-button">Take photo</button>
+                            <button type="button" id="close-camera" class="scan-secondary">Close camera</button>
+                        </div>
+                        <canvas id="camera-canvas" hidden></canvas>
+                    </div>
+                </div>
+
+                <!-- Image preview -->
+                <div class="scan-preview" id="scan-preview" hidden>
+                    <img
+                        id="discovery-preview-image"
+                        alt="Preview of your nature discovery"
+                    >
+
+                    <div class="scan-preview-actions">
+                        <button type="button"
+                                id="change-image"
+                                class="scan-secondary">
+                            Change photo
+                        </button>
+
+                        <button type="button"
+                                id="identify-discovery"
+                                class="scan-button">
+                            Identify discovery
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Status messages -->
+                <p class="scan-status"
+                   id="scan-status"
+                   role="status"
+                   aria-live="polite"></p>
+
+                <!-- Identification result -->
+                <div class="discovery-result"
+                     id="discovery-result"
+                     hidden>
+
+                    <span class="result-label">DISCOVERY REPORT</span>
+
+                    <h3 id="result-species">Identification pending</h3>
+
+                    <p id="result-scientific-name"></p>
+
+                    <div class="result-stats">
+                        <div class="result-stat">
+                            <span>Rarity</span>
+                            <strong id="result-rarity">Unverified</strong>
+                        </div>
+
+                        <div class="result-stat">
+                            <span>Points</span>
+                            <strong id="result-points">0</strong>
+                        </div>
+
+                        <div class="result-stat">
+                            <span>Verification</span>
+                            <strong id="result-verification">Pending</strong>
+                        </div>
+                    </div>
+
+                    <p id="result-explanation" class="result-explanation">
+                        Your discovery report will appear here after
+                        the identification service is connected.
+                    </p>
+                </div>
+            </div>
+
+            <p class="scan-safety-note">
+                🌱 Observe, photograph, and leave nature undisturbed.
+                Never touch unknown insects or damage plants for a discovery.
+            </p>
+        </section>
+
+        <!-- Closing banner -->
+
+        <!-- Nearby Top 10 leaderboard -->
+        <section class="leaderboard-section" id="leaderboard">
+            <div class="leaderboard-heading">
+                <span class="scan-eyebrow">LOCAL EXPLORERS</span>
+                <h2>Top 10 in your area.</h2>
+                <p>Share your location only when you choose. We use approximate coordinates to find nearby explorers, not your street address.</p>
+            </div>
+            <div class="leaderboard-card">
+                <div class="leaderboard-top">
+                    <div><h3>Nearby leaderboard</h3><p>Ranked by verified discovery points.</p></div>
+                    <span class="leaderboard-trophy" aria-hidden="true">🏆</span>
+                </div>
+                <div class="leaderboard-controls">
+                    <label for="explorer-name">Your explorer name</label>
+                    <input id="explorer-name" maxlength="30" placeholder="e.g. ForestFox" autocomplete="nickname">
+                    <button type="button" id="share-location" class="scan-button">Use my current location</button>
+                    <button type="button" id="refresh-leaderboard" class="scan-secondary">Refresh Top 10</button>
+                </div>
+                <p id="leaderboard-status" role="status" aria-live="polite">Choose “Use my current location” to find nearby explorers.</p>
+                <div id="leaderboard-list"></div>
+                <p class="scan-safety-note">Location access is optional. If you decline, you can still use TerraQuest; nearby rankings require location permission. This prototype only displays explorers already recorded in the shared database.</p>
+            </div>
+        </section>
+
+        <section class="closing-banner">
+            <div>
+                <span class="eyebrow">A DIFFERENT KIND OF SCROLL</span>
+                <h2>Let curiosity<br>lead the way.</h2>
+            </div>
+
+            <a href="#mission-planner" class="closing-link">
+                Your next adventure awaits ↗
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a class="brand" href="#home">
+            <span class="brand-mark">T</span>
+            <span>terraquest<span class="brand-ai">.ai</span></span>
+        </a>
+
+        <span>Built for the world beyond your screen.</span>
+
+        <a href="#home">Back to the top ↑</a>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
