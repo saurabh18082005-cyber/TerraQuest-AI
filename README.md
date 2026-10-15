@@ -1,4 +1,4 @@
-# 🌿 TerraQuest AI
+# 🌿 TerraQuest AI (HACTOBERFEST WEEK CHALLENGE)
 
 **Explore. Discover. Compete.**
 
